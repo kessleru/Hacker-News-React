@@ -1,4 +1,4 @@
-import { useStory } from '../hooks/useStory';
+import { useStory } from '../hooks/useGetStory';
 
 export const Story = ({ id }) => {
   const { story, loading, error } = useStory(id);

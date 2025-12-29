@@ -1,1 +1,10 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@utility container {
+  margin: 8px auto;
+}
+
+@theme {
+  --font-sans: 'IBM Plex Sans';
+  --font-mono: 'IBM Plex Mono';
+}

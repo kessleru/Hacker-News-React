@@ -1,5 +1,5 @@
 import { Story } from '../components/Story';
-import { useStories } from '../hooks/useStoriesContainer';
+import { useStories } from '../hooks/useAllStories';
 
 export function StoriesContainer() {
   const { storyIds, loading, error } = useStories(10);

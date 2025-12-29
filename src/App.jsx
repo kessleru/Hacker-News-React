@@ -1,11 +1,15 @@
 import { StoriesContainer } from './components/StoriesContainer';
+import Header from './components/Header';
 import './styles/index.css';
+import Container from './components/Container';
 
 export const App = () => {
   return (
     <>
-      <p className="text-blue-400 block text-center mb-4 text-4xl">News</p>
-      <StoriesContainer />
+      <Container>
+        <Header />
+        <StoriesContainer />
+      </Container>
     </>
   );
 };
