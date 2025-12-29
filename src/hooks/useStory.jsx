@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { getStory } from '../services/hnApi';
 
 export function useStory(id) {
-  
-
   const [story, setStory] = useState({});
   const [error, setError] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
@@ -18,7 +16,7 @@ export function useStory(id) {
         }
       } catch (err) {
         if (isMounted) {
-          setError(true);
+          setError(err);
         }
       } finally {
         if (isMounted) {
@@ -27,7 +25,6 @@ export function useStory(id) {
       }
     }
     loadStory();
-    
     return () => (isMounted = false);
   }, [id]);
 

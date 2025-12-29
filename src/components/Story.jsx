@@ -1,4 +1,3 @@
-import React from 'react';
 import { useStory } from '../hooks/useStory';
 
 export const Story = ({ id }) => {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { StoriesContainer } from './components/StoriesContainer';
 import './styles/index.css';
 
