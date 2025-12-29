@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getStory } from '../services/hnApi';
 
 export const Story = ({ id }) => {
-  const [story, setStory] = useState(null);
+  const [story, setStory] = useState({});
   const [error, setError] = React.useState(null);
   const [loading, setLoading] = React.useState(true);
 
@@ -28,6 +28,5 @@ export const Story = ({ id }) => {
   <p>{story?.title}</p>
   <p>{story?.type}</p>
   <p>{story?.by}</p>
-
   </div>;
 };

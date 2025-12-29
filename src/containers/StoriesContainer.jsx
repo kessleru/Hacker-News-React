@@ -1,15 +1,15 @@
-import React from 'react';
-import { getStoryIds, getStory } from '../services/hnApi';
+import React, { useEffect, useState } from 'react';
+import { getStoryIds } from '../services/hnApi';
 import { Story } from '../components/Story';
 
 export const StoriesContainer = () => {
-  const [storyIds, setStoryIds] = React.useState([]);
-  const [error, setError] = React.useState(null);
-  const [loading, setLoading] = React.useState(true);
+  const [storyIds, setStoryIds] = useState([]);
+  const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   //getStoryIds() retorna uma promisse, nao o array, sendo necessário o await
   // console.log(getStoryIds());
-  React.useEffect(() => {
+  useEffect(() => {
     async function loadIds() {
       try {
         const ids = await getStoryIds();

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { selectFileds } from '../utils/selectFields';
 
 export const baseUrl = 'https://hacker-news.firebaseio.com/v0/';
 export const newStoriesUrl = `${baseUrl}newstories.json`;
@@ -6,7 +7,7 @@ export const storyUrl = `${baseUrl}item/`;
 
 export async function getStory(storyId) {
   const response = await axios.get(`${storyUrl + storyId}.json`);
-  const result = response.data;
+  const result = selectFileds(response.data);
   return result;
 }
 
