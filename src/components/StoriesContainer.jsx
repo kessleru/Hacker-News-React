@@ -11,7 +11,7 @@ export function StoriesContainer() {
     <div className="grid gap-2 mx-4">
       {storyIds.map((id, index) => (
         <div key={id} className="flex gap-1">
-          <span className="text-neutral-500">{index + 1}.</span>
+          <span className="text-neutral-500 text-[12px]">{index + 1}.</span>
           <Story id={id} />
         </div>
       ))}
