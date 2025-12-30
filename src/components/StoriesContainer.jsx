@@ -2,15 +2,18 @@ import { Story } from '../components/Story';
 import { useStories } from '../hooks/useAllStories';
 
 export function StoriesContainer() {
-  const { storyIds, loading, error } = useStories(10);
+  const { storyIds, loading, error } = useStories(20);
 
-  if (loading) return <p>Carregando...</p>;
-  if (error) return <p>Erro na API</p>;
+  if (loading) return null;
+  if (error) return null;
 
   return (
-    <div className="flex flex-wrap gap-4 mx-4">
-      {storyIds.map((id) => (
-        <Story key={id} id={id} />
+    <div className="grid gap-2 mx-4">
+      {storyIds.map((id, index) => (
+        <div key={id} className="flex gap-1">
+          <span className="text-neutral-500">{index + 1}.</span>
+          <Story id={id} />
+        </div>
       ))}
     </div>
   );
