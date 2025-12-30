@@ -12,7 +12,10 @@ const Header = () => {
           <p className="text-[14px] leading-none font-mono">GitHub</p>
         </a>
         <span>|</span>
-        <a className="hover:text-white" href="https://www.linkedin.com/in/otavio-ustra-8b50bb364/">
+        <a
+          className="hover:text-white"
+          href="https://www.linkedin.com/in/otavio-ustra-8b50bb364/"
+        >
           <p className="text-[14px] leading-none font-mono">Linkedin</p>
         </a>
       </div>
