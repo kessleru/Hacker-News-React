@@ -13,9 +13,15 @@ export const Story = ({ id }) => {
         <p className="leading-tight hover:underline-offset-2 hover:underline cursor-pointer bg-amber-300/30 px-1 font-sans text-[14px]">
           {story?.title}
         </p>
-        <p className="text-[12px] self-end text-neutral-500 hover:underline hover:underline-offset-1 ml-1">
-          ({story?.url && new URL(story.url).hostname.replace(/^www\./, '')})
-        </p>
+        {story?.url ? (
+          <p className="text-[12px] self-end text-neutral-500 hover:underline hover:underline-offset-1 ml-1">
+            ({new URL(story.url).hostname.replace(/^www\./, '')})
+          </p>
+        ) : (
+          <p className="text-[12px] self-end text-neutral-400 italic ml-1">
+            no link
+          </p>
+        )}
       </a>
       <div className="flex items-center">
         <p className="text-[12px] text-neutral-500">by {story?.by}</p>
