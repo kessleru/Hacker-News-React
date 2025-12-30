@@ -6,13 +6,13 @@ const Header = () => {
         src="/assets/Logo.svg"
         alt="Logo"
       />
-      <h1 className="font-bold text-[16px] leading-none">Hacker News</h1>
+      <h1 className="font-bold text-[16px] leading-none">UK News</h1>
       <div className="ml-2 flex items-center gap-1 divide-neutral-800">
-        <a className="hover:text-white" href="./">
+        <a className="hover:text-white" href="https://github.com/kessleru">
           <p className="text-[14px] leading-none font-mono">GitHub</p>
         </a>
         <span>|</span>
-        <a className="hover:text-white" href="./">
+        <a className="hover:text-white" href="https://www.linkedin.com/in/otavio-ustra-8b50bb364/">
           <p className="text-[14px] leading-none font-mono">Linkedin</p>
         </a>
       </div>
