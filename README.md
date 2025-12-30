@@ -1,5 +1,4 @@
-# Hacker News (UK News) — Reader
-
+# Hacker News (UK News) — Em construção...
 App React que lista as _new stories_ do Hacker News e mostra título, domínio, autor e tempo relativo (min/h atrás). Os dados vêm da API oficial do Hacker News (Firebase) e o projeto usa Vite + Tailwind.
 
 ## Stack
