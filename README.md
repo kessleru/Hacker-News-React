@@ -1,20 +1,20 @@
-\# Hacker News (UK News) — Reader
+# Hacker News (UK News) — Reader
 
 App React que lista as _new stories_ do Hacker News e mostra título, domínio, autor e tempo relativo (min/h atrás). Os dados vêm da API oficial do Hacker News (Firebase) e o projeto usa Vite + Tailwind.
 
-\## Stack
+## Stack
 
 - React 19 + Vite
 - Tailwind CSS v4 (via `@tailwindcss/vite`)
 - Axios (requests HTTP)
 - ESLint + Prettier (padronização)
 
-\## Requisitos
+## Requisitos
 
 - Node.js (recomendado: LTS)
 - npm (ou equivalente)
 
-\## Como rodar
+## Como rodar
 
 Instalar dependências:
 
@@ -46,7 +46,7 @@ Lint:
 npm run lint
 ```
 
-\## O que o app faz
+## O que o app faz
 
 - Busca a lista de IDs em `newstories.json`
 - Pega os detalhes de cada item via `item/<id>.json`
@@ -59,7 +59,7 @@ npm run lint
 
 Observação: quando está carregando ou dá erro, os componentes retornam `null` (não exibem UI de loading/erro atualmente).
 
-\## Estrutura de pastas
+## Estrutura de pastas
 
 - `src/main.jsx`: bootstrap do React e import de fontes
 - `src/App.jsx`: compõe layout (`Container`, `Header`, `StoriesContainer`)
@@ -77,21 +77,21 @@ Observação: quando está carregando ou dá erro, os componentes retornam `null
   - `getTime.jsx`: converte timestamp Unix em tempo relativo
 - `src/styles/index.css`: Tailwind v4 + tema de fontes + utilitário `container`
 
-\## Fluxo de dados (alto nível)
+## Fluxo de dados (alto nível)
 
 1. `StoriesContainer` chama `useStories(20)`
 2. `useStories` chama `getStoryIds()` em `src/services/hnApi.jsx`
 3. Para cada ID, `Story` chama `useStory(id)`
 4. `useStory` chama `getStory(id)` e o service retorna só os campos relevantes via `selectFields`
 
-\## API utilizada
+## API utilizada
 
 - Base URL: `https://hacker-news.firebaseio.com/v0/`
 - Endpoints usados:
   - `newstories.json`
   - `item/<id>.json`
 
-\## Notas e limitações
+## Notas e limitações
 
 - Tempo relativo só trata minutos (< 1h) e horas (>= 1h).
 - Não há estado visual de loading/erro (os componentes apenas não renderizam nada).
